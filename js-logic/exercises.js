@@ -17,11 +17,7 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
   return "Get back to coding!";
 };*/
 
-console.log('Happy Aloha Friday!');
 
-var day = 'Friday';
-var month = "November";
-var year = '2018';
 /*
  * #1
  * Function - canVote

@@ -17,11 +17,7 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
   return "Get back to coding!";
 };*/
 
-console.log('Happy Aloha Friday!');
 
-var day = 'Friday';
-var month = "November";
-var year = '2018';
 /*
  * #1
  * Function - canVote
@@ -33,6 +29,14 @@ var year = '2018';
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 
+function canVote(age){
+  if(age >= 18){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log("1. canVote: ", canVote(19));
 
 /*
  * #2
@@ -46,7 +50,12 @@ var year = '2018';
  * Console.log your result.
 */
 
-
+function login(password){
+ if(password === "test1234"){
+  return "Login Success!";
+ }
+}
+console.log(login("test1234"));
 /*
  * #3
  * Function - isGreaterThan
@@ -60,7 +69,15 @@ var year = '2018';
  * Console.log your result.
 */
 
+function isGreaterThan(first, second){
+  if(first > second){
+    return true;
+  }
+}
+console.log(isGreaterThan(3, 1));
 
+var showResult = isGreaterThan(5, 1);
+console.log("isGreaterThan: ", showResult);
 
 /*
  * #4
@@ -74,7 +91,15 @@ var year = '2018';
  * Console.log your result.
 */
 
+function mustBeTrue(boo){
+  if(boo === true){
+    return true;
+  }else{
+    return false;
+  }
 
+}
+console.log("mustBeTrue: ", mustBeTrue(true));
 
 /*
  * #5
@@ -88,7 +113,13 @@ var year = '2018';
  * Console.log your result.
 */
 
+function bigBird(word){
+  if(word.length === 3){
+    return "Word to Big Bird!";
+  }
+}
 
+console.log("bigBird: ", bigBird("cat"));
 
 /*
  * #6
@@ -103,6 +134,14 @@ var year = '2018';
  * Console.log your result.
 */
 
+function isEqual(first, second){
+if(first === second){
+  return "You look mahvelous!";
+}else{
+  return "I don't know who you are anymore."; 
+  }
+}
+console.log(isEqual("ying", "yang"));
 
 /*
  * #7
@@ -117,6 +156,14 @@ var year = '2018';
  * Console.log your result.
 */
 
+function notEqual(first, second){
+  if(first !== second){
+    return "Opposites do attract.";
+  }else{
+    return "Cause it's like you're my mirror." ;
+  }
+}
+console.log(notEqual("sweet", "sour"));
 
 /*
  * #8
@@ -130,7 +177,15 @@ var year = '2018';
  * Console.log your result.
 */ 
 
+function spareChange(money){
+  if(money >100){
+    return true;
+  }else{
+    return false;
+  }
+}
 
+console.log("spareChange: ", spareChange(101));
 
 /*
  * #9
@@ -146,7 +201,15 @@ var year = '2018';
  * Console.log your result.
 */ 
 
-
+function dirty30(one, two, three){
+  var sum = one + two + three;
+  if(sum > 30){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log("dirty30: ", dirty30(10, 20, 25));
 
 /*
  * #10
@@ -160,7 +223,14 @@ var year = '2018';
  * Console.log your result.
 */ 
 
-
+function evenStevens(num){
+  if(num%2 === 0){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log("evenStevens ", evenStevens(8));
 
 
 /*
@@ -177,6 +247,15 @@ var year = '2018';
 */ 
 
 
+function daClub(cover, age){
+  if(cover >= 21 && age >= 21){
+    return "Welcome to the Legends Lounge.";
+  }else{
+    return "Chuck E Cheese is across the street.";
+  }
+}
+console.log("daClub: ", daClub(22, 21));
+
 /*
  * #12
  * Function - graduation
@@ -190,7 +269,15 @@ var year = '2018';
  * Console.log your result.
 */ 
 
-
+function graduation(credits, thesis){
+ if(credits >= 120 || thesis === true){
+  return "Congratulations on a job well done.";
+ }else{
+  return "See you in summer school.";
+ }
+}
+var gradResults = graduation(100, true);
+console.log("graduuation: ", gradResults);
 
 /*
  * #13
@@ -203,6 +290,17 @@ var year = '2018';
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
+
+function moneyTrain(speed){
+  if(speed < 50){
+    return "You are riding Honolulu's Rail.";
+  }else if(speed < 100){
+    return "You are riding an Amtrak.";
+  }else{
+    return "Now you ballin' in the Shinkansen!";
+  }
+}
+console.log(moneyTrain(99));
 
 
 /*
@@ -219,10 +317,48 @@ var year = '2018';
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 100;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+
+function buyDoughnut(){
+ if(budget >= doughnutPrice){ 
+  budget -= doughnutPrice;
+  doughnutBought++;
+ }
+}
+
+buyDoughnut();
+console.log("budget ", budget);
+console.log("bought ", doughnutBought);
+
+
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
+function dailySpecials(special) {
+  switch (special) {
+  case 'Monday':
+    menu = 'Sweet Onion Chicken Teriyaki';
+    break;
+  case 'Tuesday':
+    menu = 'Oven Roasted Chicken';
+    break;
+  case 'Wednesday' :
+    menu = 'Turkey';
+    break;
+  case 'Thursday' :
+   menu = 'Italian BLT';
+    break;
+  case 'Friday' :
+    menu = 'Tuna';
+    break;
+
+}
+  return menu;
+}
+console.log(dailySpecials('Friday'));
 
 
 /*
@@ -252,6 +388,9 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+for(var i = 1; i<=5; i++){
+  console.log("player ", i);
+}
 
 /* 
  * #16
@@ -259,6 +398,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+  for(var i = 0; i<myFavFoods.length; i++){
+    console.log(myFavFoods[i]);
+  }
 
 /*
  * #17
@@ -276,6 +418,19 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
 
 
+var numArray = [22, 33, 44, 55, 66];
+
+function sumItUp(arr){
+  var total = 0;
+  for(var i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+    total += arr[i]; // total = total + arr[i];
+  }
+  return total;
+
+}
+
+console.log("sumitup ", sumItUp(numArray));
 
 /*
  * #18
@@ -289,7 +444,25 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log both the east and west arrays.
 */ 
 
-var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+  var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+  var east = [];
+  var west = [];
+
+  function allStars(ballers){
+    for(var i = 0; i<ballers.length; i++){
+      console.log(ballers[i]);
+      if(i%2 === 0){
+        //console.log(i);
+      east.push(ballers[i]);
+      }else{
+        west.push(ballers[i]);
+      }
+    }
+  }
+  allStars(players);
+  console.log("east: ", east);
+  console.log("west: ", west);
+
 /*
  * #19
  * Function - subways
@@ -304,6 +477,20 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+function subways(special){
+  for(var i = 0; i<special.length; i++){
+    if(i%2 === 1){
+      console.log(i);
+      special.splice(i, 1, "Classic Tuna"); 
+      special[i] = "Classic Tuna";
+    }
+
+  }
+ return special;
+}
+
+subways(subOftheDay);
+console.log(subOftheDay);
 
 /*
 Final Boss
@@ -317,8 +504,21 @@ Final Boss
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
 
-var phrase = "An apple a day keeps Alice feeling awesome!";
- 
+  var phrase = "An apple a day keeps Alice feeling awesome!";
+
+  function removeLetter(str){
+    var newArr = [];
+    for(var i = 0; i<str.length; i++){
+      console.log(str[i]);
+      if(str[i] !== 'a' && str[i] !== "A"){
+        newArr.push(str[i]);
+      }
+    }
+    console.log(newArr);
+    return newArr;
+  } 
+removeLetter(phrase);
+
   
   
 
