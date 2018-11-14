@@ -291,7 +291,18 @@ console.log(graduation(100,false)); // See you in Summer School
  * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
-
+function moneyTrain(speed){
+  if (speed < 50){
+    return "You are riding Honolulu's Rail.";
+  } else if (speed < 100){
+    return "You are riding an Amtrak.";
+  }else{
+    return "Now you ballin' in the Shinkansen!";
+  }
+}
+console.log(moneyTrain(40)); // You are riding Honolulu's Rail."
+console.log(moneyTrain(90)); // You are riding an Amtrak."
+console.log(moneyTrain(150)); // Now you ballin' in the Shinkansen!"
 
 /*
  * #14
