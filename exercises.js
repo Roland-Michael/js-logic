@@ -118,8 +118,15 @@ console.log(mustBeTrue()); //false
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
-
-
+function bigBird(word){
+  if (word.length === 3){
+    return'Word to Big Bird!';
+  }else{
+    return 'No';
+  }
+}
+console.log(bigBird('two')); // "Word to Big Bird!"
+console.log(bigBird('snuffelufugus')); //"No"
 
 /*
  * #6
