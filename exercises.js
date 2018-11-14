@@ -181,7 +181,15 @@ console.log(notEqual('griffey','griffey')); // "Cause it's like you're my mirror
  * The function will return true if the number passed into the function is greater than 100, otherwise it will return false.
  * Console.log your result.
 */ 
-
+function spareChange(money){
+  if (money > 100){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(spareChange(200)); // true
+console.log(spareChange(99)); // false
 
 
 /*
