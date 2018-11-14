@@ -32,7 +32,15 @@ var year = '2018';
  *
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
-
+function canVote(age){
+  if (age > 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(canVote(20)); //true
+console.log(canVote(16)); //false
 
 /*
  * #2
