@@ -270,9 +270,16 @@ console.log(daClub(22,20)); // Chuck E Cheese is across the street
  * If EITHER the number value is greater than or equal to 120 or the boolean value is true, then the function will return the message: "Congratulations on a job well done." Otherwise, return the message: "See you in summer school."
  * Console.log your result.
 */ 
-
-
-
+function graduation(credits,thesis){
+  if( credits >= 120 || thesis === true){
+    return "Congratulations on a job well done.";
+  }else{
+    return "See you in summer school";
+  }
+}
+console.log(graduation(125,false)); //Congratulations on a job well done
+console.log(graduation(100,true)); //Congratulations on a job well done
+console.log(graduation(100,false)); // See you in Summer School
 /*
  * #13
  * Function - moneyTrain
