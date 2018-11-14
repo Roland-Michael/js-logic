@@ -226,9 +226,15 @@ console.log(dirty30(7,8,9)); //false
  * The function will return true if the number passed in is an even integer, otherwise it will return false.
  * Console.log your result.
 */ 
-
-
-
+function evenStevens(num){
+  if (num%2 === 0){
+    return 'Q10 true';
+  }else{
+    return 'Q10 false';
+  }
+}
+console.log(evenStevens(80)); // Q10 true
+console.log(evenStevens(79)); // Q10 false
 
 /*
  * #11
