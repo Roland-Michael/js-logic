@@ -75,8 +75,15 @@ console.log(login('letmein777')); // "error: password incorrect"
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreaterThan(first, second){
+  if (first > second) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(isGreaterThan(7,4)); //true
+console.log(isGreaterThan(4,7)); //false
 
 /*
  * #4
